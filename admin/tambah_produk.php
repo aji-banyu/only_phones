@@ -40,29 +40,15 @@ if (isset($_POST['save'])) {
 
 <head>
   <title>Tambah Produk</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="../assets/css/output.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'blue-dark': '#0a2a66',
-            'blue-main': '#1e5eff',
-            'blue-soft': '#e9f0ff',
-            'bg-main': '#f4f7ff',
-          },
-          fontFamily: {
-            sans: ['Poppins', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+
 </head>
 
-<body class="bg-bg-main font-sans antialiased text-slate-800">
+<body class="bg-bg-main antialiased text-slate-800 font-[Poppins]">
   <div class="flex h-screen overflow-hidden">
     <?php include 'sidebar.php'; ?>
 
@@ -110,7 +96,7 @@ if (isset($_POST['save'])) {
               <input type="file" name="foto" class="w-full p-2 border border-gray-200 rounded-xl" required accept="image/*">
             </div>
 
-            <button type="submit" name="save" class="w-full bg-blue-main text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition">Simpan Produk</button>
+            <button type="submit" name="save" class="w-full bg-blue-main text-white font-bold py-3 rounded-xl cursor-pointer hover:bg-blue-700 transition">Simpan Produk</button>
           </form>
         </div>
       </div>
