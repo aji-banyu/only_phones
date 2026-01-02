@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "koneksi.php";
 
 $id = $_GET['id'];
@@ -90,9 +91,6 @@ $brand = mysqli_fetch_assoc($conn->query("SELECT * FROM brands_category WHERE id
                     <div class="flex items-end gap-3 mb-1">
                         <span class="text-3xl font-bold text-gray-900">Rp <?= number_format($produk['harga']) ?></span>
                     </div>
-                    <!-- <p class="text-gray-500 text-sm">
-                        atau mulai dari <span class="font-semibold text-gray-800">Rp 1.062.458/bln</span> untuk 24 bln*
-                    </p> -->
                     <p class="text-gray-600 text-sm"><?= $produk['deskripsi'] ?></p>
                 </div>
 
@@ -117,7 +115,6 @@ $brand = mysqli_fetch_assoc($conn->query("SELECT * FROM brands_category WHERE id
                             Beli Langsung
                         </button>
                     </div>
-                    <a href="#" class="block text-center text-primary text-sm font-medium mt-4 hover:underline">Lihat Selengkapnya ></a>
                 </div>
 
                 <div class="mt-6 bg-blue-50 border border-blue-100 rounded-lg p-4 flex items-start gap-3">
