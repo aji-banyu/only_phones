@@ -91,6 +91,9 @@ $result = $conn->query($query)
                         </td>
                         <td class="py-4 text-right relative pr-2">
                           <div class="flex justify-between items-center absolute right-2 top-1/2 -translate-y-3/6 gap-2 w-max">
+                            <a href="detail_produk.php?id=<?= $row['id_produk'] ?>" class="w-8 h-8 rounded-lg text-blue-400 hover:bg-blue-100 inline-flex items-center justify-center transition-colors">
+                              <i class="fas fa-eye"></i>
+                            </a>
                             <a href="update_produk.php?id=<?= $row['id_produk'] ?>" class="w-8 h-8 rounded-lg text-green-400 hover:bg-green-100 inline-flex items-center justify-center transition-colors"><i class=" fa-solid fa-pen"></i></a>
                             <a href="hapus_produk.php?id=<?= $row['id_produk']; ?>" onclick="return confirm('Yakin hapus?')" class="w-8 h-8 rounded-lg text-red-400 hover:bg-red-100 inline-flex items-center justify-center transition-colors"><i class="fas fa-trash"></i></a>
                           </div>
@@ -142,6 +145,9 @@ $result = $conn->query($query)
                         </td>
                         <td class="py-4 text-right relative pr-2">
                           <div class="flex justify-between items-center absolute right-2 top-1/2 -translate-y-3/6 gap-2 w-max">
+                            <a href="detail_produk.php?id=<?= $row['id_produk'] ?>" class="w-8 h-8 rounded-lg text-blue-400 hover:bg-blue-100 inline-flex items-center justify-center transition-colors">
+                              <i class="fas fa-eye"></i>
+                            </a>
                             <a href="update_produk.php?id=<?= $row['id_produk'] ?>" class="w-8 h-8 rounded-lg text-green-400 hover:bg-green-100 inline-flex items-center justify-center transition-colors"><i class=" fa-solid fa-pen"></i></a>
                             <a href="hapus_produk.php?id=<?= $row['id_produk']; ?>" onclick="return confirm('Yakin hapus?')" class="w-8 h-8 rounded-lg text-red-400 hover:bg-red-100 inline-flex items-center justify-center transition-colors"><i class="fas fa-trash"></i></a>
                           </div>

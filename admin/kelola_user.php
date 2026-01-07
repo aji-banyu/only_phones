@@ -85,8 +85,6 @@ include '../koneksi.php';
                 $query_user = "SELECT * FROM users WHERE role = '$role'";
 
                 $users = $conn->query($query_user);
-                $user = $users->fetch_assoc();
-                $user['nama']
                 ?>
 
                 <?php if (mysqli_num_rows($users) > 0): ?>
@@ -104,6 +102,9 @@ include '../koneksi.php';
                       <td class="py-4"><span class="bg-blue-50 text-blue-main px-3 py-1 rounded-full text-xl font-semibold"><?= $row['role']; ?></span></td>
                       <td class="py-4 text-right relative pr-2">
                         <div class="flex justify-between items-center absolute right-2 top-1/2 -translate-y-3/6 gap-2 w-max">
+                          <a href="detail_user.php?id=<?= $row['id_user'] ?>" class="w-8 h-8 rounded-lg text-blue-400 hover:bg-blue-100 inline-flex items-center justify-center transition-colors">
+                            <i class="fas fa-eye"></i>
+                          </a>
                           <a href="update_user.php?id=<?= $row['id_user'] ?>" class="w-8 h-8 rounded-lg text-green-400 hover:bg-green-100 inline-flex items-center justify-center transition-colors"><i class=" fa-solid fa-pen"></i></a>
                           <a href="hapus_user.php?id=<?= $row['id_user']; ?>" onclick="return confirm('Yakin hapus?')" class="w-8 h-8 rounded-lg text-red-400 hover:bg-red-100 inline-flex items-center justify-center transition-colors"><i class="fas fa-trash"></i></a>
                         </div>
@@ -113,7 +114,7 @@ include '../koneksi.php';
 
                 <?php else: ?>
                   <tr>
-                    <td colspan="5" class="py-6 text-center text-gray-400 italic">Gudang Kosong</td>
+                    <td colspan="5" class="py-6 text-center text-gray-400 italic">User Kosong</td>
                   </tr>
                 <?php endif ?>
               </tbody>

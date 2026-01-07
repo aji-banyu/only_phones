@@ -130,7 +130,7 @@ include "koneksi.php";
 
               <a href="detail_produk.php?id=<?= $p['id_produk'] ?>" class="absolute left-5 bottom-5 underline text-xl font-semibold hover:text-blue-500 transition-all">Lihat</a>
 
-              <a href="#" class="absolute w-12 h-12 right-5 bottom-5 flex justify-center items-center text-white text-4xl p-0.5 bg-black rounded-full"><i class='bx  bx-cart'></i> </a>
+              <a href="beli.php?id=<?= $p['id_produk'] ?>" class="absolute w-12 h-12 right-5 bottom-5 flex justify-center items-center text-white text-4xl p-0.5 bg-black rounded-full"><i class='bx  bx-cart'></i> </a>
             </div>
           <?php endwhile ?>
 

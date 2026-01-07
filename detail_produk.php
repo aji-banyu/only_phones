@@ -103,18 +103,19 @@ $brand = mysqli_fetch_assoc($conn->query("SELECT * FROM brands_category WHERE id
                     </div>
                 </div>
 
-                <div class="mt-auto border-t border-gray-100 pt-6">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="flex-1 bg-white border-2 border-primary text-primary font-bold py-3.5 px-6 rounded-xl hover:bg-blue-50 transition flex justify-center items-center gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                            </svg>
-                            Keranjang
-                        </button>
-                        <button class="flex-1 bg-blue-main text-white font-bold py-3.5 px-6 rounded-xl hover:bg-blue-mainDark transition shadow-lg shadow-blue-200 flex justify-center items-center">
-                            Beli Langsung
-                        </button>
-                    </div>
+                <div class="flex gap-4 mb-8">
+
+                    <a href="beli.php?id=<?= $produk['id_produk'] ?>" class="flex-1 bg-white border border-gray-200 text-gray-700 font-bold py-3.5 px-6 rounded-xl hover:bg-gray-50 transition flex justify-center items-center gap-2 cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        + Keranjang
+                    </a>
+
+                    <a href="beli.php?id=<?= $produk['id_produk'] ?>" class="flex-1 bg-blue-main text-white font-bold py-3.5 px-6 rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 flex justify-center items-center cursor-pointer">
+                        Beli Langsung
+                    </a>
+
                 </div>
 
                 <div class="mt-6 bg-blue-50 border border-blue-100 rounded-lg p-4 flex items-start gap-3">

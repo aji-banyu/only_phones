@@ -15,7 +15,7 @@
 
     togglePassword2.addEventListener('click', function() {
       const type = passwordField2.getAttribute('type') === 'password' ? 'text' : 'password';
-      passwordField.setAttribute('type', type);
+      passwordField2.setAttribute('type', type);
 
       // Ganti ikon
       this.classList.toggle('bx-eye-slash');
