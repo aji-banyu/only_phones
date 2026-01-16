@@ -3,12 +3,9 @@ include '../koneksi.php';
 
 // Ambil data dari link URL
 $id_pesanan = $_GET['id'];
-$aksi_admin = $_GET['aksi']; // Isinya bisa 'terima' atau 'tolak'
+$aksi_admin = $_GET['aksi'];
 
 if ($aksi_admin == 'terima') {
-  // ============================================================
-  // KONDISI 1: JIKA ADMIN KLIK TERIMA
-  // ============================================================
 
   // 1. Ubah status pesanan jadi 'lunas'
   $conn->query("UPDATE transactions SET status = 'lunas' WHERE id_transaksi = '$id_pesanan'");
